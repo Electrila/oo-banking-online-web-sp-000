@@ -13,6 +13,7 @@ class Transfer
   
   def valid?
     if sender.valid? && receiver.valid?
+      @@transfers << self
       true
     else
       false
