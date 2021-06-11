@@ -2,6 +2,8 @@ class Transfer
   
   attr_accessor :sender, :receiver, :status, :amount
   
+  @@transfers = []
+  
   def initialize(sender, receiver, amount = 0)
     @sender = sender
     @receiver = receiver
@@ -18,7 +20,7 @@ class Transfer
   end
   
   def execute_transaction
-    
+    if sender.valid? && receiver.valid?
   end
   
 end
